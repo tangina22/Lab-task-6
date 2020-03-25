@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post" action="" onsubmit="return validation()" enctype="multipart/form-data">
+     	 <tr>
+       <td> Date: </td>
+   </tr>
+   <tr>
+       <td>
+           <input type="date" id="date" name="date">
+       </td>
+   </tr>
+   <tr>
+     <td><span id="dateid" class="text-danger font-weight-bold"> </span></td>
+   </tr>
+
+     </form>
+</body>
+</html>
+<script type="text/javascript">
+	function validation(){
+    /*
+			var bloodgroup = document.getElementById("bloodgroup");
+        if (bloodgroup.value == "") {
+          
+            alert("Please select an option!");
+            return false;
+        }*/
+        var regex = /(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})\s*(\d{0,2}):?(\d{0,2}):?(\d{0,2})/,
+       parts = regex.exec(str);
+
+       if (parts) {
+     var date = new Date ( (+parts[3]), (+parts[1])-1, (+parts[2]), (+parts[4]), (+parts[5]), (+parts[6]) );
+    if ( !(( date.getDate() == parts[2] ) && ( date.getMonth() == parts[1]-1 ) && ( date.getFullYear() == parts[3] ) ) ){
+            document.getElementById('dateid').innerHTML =" ** Please fill the date";
+                 return false;
+    }
+     }
+
+
+	}
+</script>

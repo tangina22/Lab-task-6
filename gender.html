@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post" action="" onsubmit="return validation()" enctype="multipart/form-data">
+     	 <tr>
+       <td>Gender:</td>
+   </tr>
+   <tr>
+       <td><input type="radio" name="gender" value="male">Male</td>
+   </tr>
+   <tr>
+       <td><input type="radio" name="gender" value="fimale">Female</td>
+   </tr>
+   <tr>
+       <td><input type="radio" name="gender" value="other">Other</td>
+   </tr> 
+   <tr>
+	   <td><span id="genderid" class="text-danger font-weight-bold"> </span></td>
+   </tr>
+     </form>
+</body>
+</html>
+<script type="text/javascript">
+	function validation(){
+			if (!(gender[0].checked || gender[1].checked || gender[2].checked || gender[3].checked)) {
+               document.getElementById('genderid').innerHTML =" ** Please fill the Gender";
+                 return false;
+               }
+	}
+</script>

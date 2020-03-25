@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post" action="" onsubmit="return validation()" enctype="multipart/form-data">
+     	 <tr>
+       <td> Name: </td>
+   </tr>
+   <tr>
+       <td><input type="text" name="name" value="" id="name"></td>
+	   <td><span id="nameid" class="text-danger font-weight-bold"> </span></td>
+   </tr>
+     </form>
+</body>
+</html>
+<script type="text/javascript">
+	function validation(){
+			var name = document.getElementById('name').value;
+		    if(name == ""){
+				document.getElementById('nameid').innerHTML =" ** Please fill the Name field";
+				return false;
+			}
+			if((name.length <= 2) || (name.length > 20)) {
+				document.getElementById('nameid').innerHTML =" ** Name lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(name)){
+				document.getElementById('nameid').innerHTML =" ** only carecters are allowed";
+				return false;
+			}
+
+	}
+</script>

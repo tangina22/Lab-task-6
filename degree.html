@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function checkButton(){
+if(document.form1.button1.checked == false && document.form1.button2.checked == false &&document.form1.button3.checked == false){
+alert("Please check a box");
+} else{
+alert("Box is checked");
+}
+}
+</script>
+</head>
+<body>
+<form name="form1">
+<input type="chechbox" name=button1>SSC
+<br> <input type="chechbox" name=button2 CHECKED>HSC
+<br> <input type="chechbox" name=button3 CHECKED>BSC
+<br> <INPUT type="button" value="Get Checked" onClick='checkButton()'>
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post" action="" onsubmit="return validation()" enctype="multipart/form-data">
+     	 <tr>
+       <td> Blood Group: </td>
+   </tr>
+   <tr>
+       <td>
+           <select id="bloodgroup" name="Bloodgroup">
+               <option value="">A+</option>
+               <option value="1">B+</option>
+               <option value="2">B-</option>
+               <option value="3">O+</option>
+           </select>
+       </td>
+   </tr>
+     </form>
+</body>
+</html>
+<script type="text/javascript">
+	function validation(){
+			var bloodgroup = document.getElementById("bloodgroup");
+        if (bloodgroup.value == "") {
+          
+            alert("Please select an option!");
+            return false;
+        }
+
+	}
+</script>
